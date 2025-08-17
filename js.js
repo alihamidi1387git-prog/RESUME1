@@ -1,12 +1,36 @@
-// mutable & immutable 
-// mutable => array , object , date 
-// immutable => string , number , age
+// بسم تعالی
 
-
-
-let arr = [1,2,3,4,5];
-
-
-[...arr].push("mio")
-
-
+function wakeUp()
+{
+    return new Promise((resolve , reject) =>
+    {
+        setTimeout(() => {
+            console.log('wake up');
+            resolve('i am wake up at 07:00')
+        }, 2000);
+    })
+}
+function eatBreakFat(msg)
+{
+    return new Promise((resolve , reject) =>
+        {
+            setTimeout(() => {
+                console.log(msg + " and eat BreakFast");
+                resolve('finish eating in 07:40')
+            }, 2000);
+        })   
+}
+function goWork(msg)
+{
+    return new Promise((resolve , reject) =>
+        {
+            setTimeout(() => {
+                console.log(msg + " and go work");
+                resolve('finish all work')
+            }, 2000);
+        })   
+}
+wakeUp()
+    .then(eatBreakFat)
+    .then(goWork)
+    .then(msg => console.log(msg))
