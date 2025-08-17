@@ -30,6 +30,7 @@ function goWork(msg)
             }, 2000);
         })   
 }
+ReportBody
 wakeUp()
     .then(eatBreakFat)
     .then(goWork)
