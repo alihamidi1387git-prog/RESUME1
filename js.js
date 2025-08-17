@@ -34,4 +34,4 @@ wakeUp()
     .then(eatBreakFat)
     .then(goWork)
     .then(msg => console.log(msg))
-    s
+    sf
